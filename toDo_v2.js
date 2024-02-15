@@ -15,7 +15,7 @@ let doneTodo = function(todo, num = 0){
     // else{
 
     // }
-    todo.done = todo.done - num;
+    todo.done = todo.done += num;
 }
 
 let resetTodo = function(todo){
@@ -25,7 +25,7 @@ let resetTodo = function(todo){
 
 let summary = function(todo){
     // + is used because of logical issue
-    return `you have ${todo.meetings + todo.done} meetings remaining`;
+    return `you have ${todo.meetings - todo.done} meetings remaining`;
 }
 
 addTodo(myTodo, 4);
